@@ -29,21 +29,28 @@ int main(){
     
     for(i=0;i<n;i++){
     	nilai[i] = sqrt((pow((db[i].tgsb - db[i].tgs),2))+(pow((db[i].utsb - db[i].uts),2))+(pow((db[i].uasb - db[i].uas),2)));
+    	
     } 
  	
-    printf("===========================================================\n");
+	printf("===========================================================\n");
     printf("              Prediksi Kelas Data               \n");
     printf("============================================================\n");
     printf("NO | Nilai Tugas | Nilai UTS | Nilai UAS |   Kelas   | nilai |\n");
     printf("============================================================\n");
     for(i=0;i<n;i++){
-        printf("%d  | %d           | %d         | %d         | %s\t|%.2f  \n",i+1, db[i].tgs,db[i].uts, db[i].uas, db[i].ket, nilai[i]);
+        printf("%d  | %d          | %d        | %d        | %s\t|%.2f  \n",i+1, db[i].tgs,db[i].uts, db[i].uas, db[i].ket, nilai[i]);
     }
     printf("============================================================\n\n");
     
     printf("masukkan k: ");scanf("%d", &db[i].k);
     
-    printf("%d  | %d           | %d         | %d         ",i+1, db[i].tgsb,db[i].utsb, db[i].uasb);       
+    printf("\n");
+    printf("=====================================================\n");
+    printf("              Hasil Prediksi Kelas Data               \n");
+    printf("=====================================================\n");
+    printf("NO | Nilai Tugas | Nilai UTS | Nilai UAS |   Kelas   \n");
+    printf("=====================================================\n");
+    printf("%d  | %d          | %d        | %d        ",i, db[i].tgsb,db[i].utsb, db[i].uasb);       
     float d[n][0], jarak;
  
   //Sorting
@@ -92,4 +99,3 @@ int main(){
   }
  
 }
-
