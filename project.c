@@ -29,13 +29,9 @@ int main(){
     
     for(i=0;i<n;i++){
     	nilai[i] = sqrt((pow((db[i].tgsb - db[i].tgs),2))+(pow((db[i].utsb - db[i].uts),2))+(pow((db[i].uasb - db[i].uas),2)));
-    	
-        /* printf("nilai ke: %d\n",i);
-        printf("%.2f",nilai[i]);
-        printf("\n"); */
     } 
  	
-	printf("===========================================================\n");
+    printf("===========================================================\n");
     printf("              Prediksi Kelas Data               \n");
     printf("============================================================\n");
     printf("NO | Nilai Tugas | Nilai UTS | Nilai UAS |   Kelas   | nilai |\n");
