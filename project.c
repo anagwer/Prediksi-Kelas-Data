@@ -91,10 +91,11 @@ int main(){
     printf(" Nilai Tugas | Nilai UTS | Nilai UAS |   Kelas   \n");
     printf("=================================================\n");
     printf(" %d          | %d        | %d        ", db[i].tgsb,db[i].utsb, db[i].uasb);       
-
+	float d[n][2];
+  
   //Pemanggilan fungsi shorting
    Sort(n);
-  
+   
   int baik = 0; 
   int cukup = 0; 
   int kurang = 0; 
@@ -102,19 +103,20 @@ int main(){
 	//membandingkan kata apa yang sering muncul pada sebagian data yang telah diambil oleh variable K
 	//fungsi strcmp = digunakan untuk membandingkan string dengan string yang lainnya.
   for (i = 0; i < db[i].k; i++) {
-    if (strcmp(db[i].ket, "baik") == 0) {
+  	l = d[i][0];
+    if (strcmp(db[l].ket, "baik") == 0) {
       baik++;
     }
-    if (strcmp(db[i].ket, "cukup") == 0) {
+    if (strcmp(db[l].ket, "cukup") == 0) {
       cukup++;
     }
-    if (strcmp(db[i].ket, "kurang") == 0) {
+    if (strcmp(db[l].ket, "kurang") == 0) {
       kurang++;
     }
   }
   
   	//menampilkan hasil kelasnya
-      printf("| %s \n", db[i].ket);
+      printf("| %s \n", db[l].ket);
 	
   if (baik > cukup && baik > kurang) {
     printf("\n baik");
